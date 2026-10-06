@@ -31,7 +31,6 @@ function Portfolio() {
   const [status, setStatus] = useState<'idle' | 'sent' | 'error'>('idle');
   const closeRef = useRef<HTMLButtonElement>(null);
   const previousFocus = useRef<HTMLElement | null>(null);
-  const submitContactFn = useServerFn(submitContact);
   useEffect(() => {
     const observer = new IntersectionObserver(entries => { for (const entry of entries) if (entry.isIntersecting) setActive(entry.target.id); }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
     document.querySelectorAll('main > section[id]').forEach(section => observer.observe(section));
