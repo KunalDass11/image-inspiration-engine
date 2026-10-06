@@ -87,7 +87,7 @@ function Portfolio() {
         <div className="form-footer">
           <Button type="submit" disabled={sending}>{sending ? 'Sending…' : <>Send Message <ArrowUpRight/></>}</Button>
           {status === 'sent' && <p className="form-status" role="status">Message sent — thank you for reaching out.</p>}
-          {status === 'error' && <p className="form-status" role="alert">{typeof (status as object) === 'object' ? '' : ''}Something went wrong. Please try again or email me directly.</p>}
+          {status === 'error' && <p className="form-status" role="alert">Something went wrong. Please try again or email me directly.</p>}
           <span className="form-note">Questions, ideas, or collaborations — all welcome. Prefer email? Use the address below.</span>
         </div>
       </form><div className="contact-details"><a className="contact-email" href={links.email}>das.kunal0047@gmail.com <ArrowUpRight size={20}/></a><div className="contact-links"><a href="tel:+917482898422"><Phone size={13}/> 7482898422</a><ExternalLink href={links.linkedin}>LinkedIn <ArrowUpRight size={13}/></ExternalLink><ExternalLink href={links.github}>GitHub <ArrowUpRight size={13}/></ExternalLink></div></div><p className="hero-location"><MapPin size={13}/> KIIT, Bhubaneswar, Odisha</p></section>
