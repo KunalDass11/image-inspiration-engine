@@ -1,5 +1,6 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, useServerFn } from '@tanstack/react-router';
 import { useEffect, useRef, useState } from 'react';
+import { submitContact } from '@/lib/contact.functions';
 import { ArrowDown, ArrowDownToLine, ArrowRight, ArrowUpRight, Award, Binary, BrainCircuit, Braces, Code2, Database, Github, GraduationCap, Linkedin, Mail, MapPin, Menu, Phone, Sparkles, Terminal, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ProjectVisual } from '@/components/portfolio/ProjectVisual';
@@ -25,8 +26,12 @@ function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState('home');
   const [selected, setSelected] = useState<(typeof projects)[number] | null>(null);
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sent' | 'error'>('idle');
   const closeRef = useRef<HTMLButtonElement>(null);
   const previousFocus = useRef<HTMLElement | null>(null);
+  const submitContactFn = useServerFn(submitContact);
   useEffect(() => {
     const observer = new IntersectionObserver(entries => { for (const entry of entries) if (entry.isIntersecting) setActive(entry.target.id); }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
     document.querySelectorAll('main > section[id]').forEach(section => observer.observe(section));
