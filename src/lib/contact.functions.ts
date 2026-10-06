@@ -1,4 +1,5 @@
 import { createServerFn } from '@tanstack/react-start';
+import { createClient } from '@supabase/supabase-js';
 import { z } from 'zod';
 
 const contactSchema = z.object({
@@ -34,7 +35,3 @@ export const submitContact = createServerFn({ method: 'POST' })
     }
     return { ok: true as const };
   });
-
-function createClient(...args: Parameters<typeof import('@supabase/supabase-js').createClient>) {
-  throw new Error('placeholder');
-}
