@@ -1,24 +1,40 @@
-# Image Inspiration Engine
+# Kunal Kumar Das — Personal Portfolio
 
-take the image as example and make
+A modern personal portfolio website showcasing my projects, skills,
+and experience in Software Development, AI/ML, and Data Analysis.
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
 
-## Build with Lovable
+- Responsive modern design
+- About Me section
+- Skills and technologies
+- Projects showcase
+- Contact form
+- GitHub integration
+- Responsive design for desktop and mobile
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/02fbf8e3-3542-4d1a-aea7-7e6a478ec80a).
+## Tech Stack
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- React
+- TypeScript
+- Tailwind CSS
+- JavaScript
+- EmailJS
+- Supabase
 
-## Development
+## Projects
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### BioBeat AI
+AI-based health analysis project.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+### Fake News Detection
+Machine learning project for detecting fake and real news.
+
+### Phishing Website Detection
+Machine learning-based phishing website detection system.
+
+## Author
+
+**Kunal Kumar Das**
+
+GitHub: https://github.com/daskunal012-ai
