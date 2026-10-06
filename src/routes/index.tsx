@@ -1,7 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { useServerFn } from '@tanstack/react-start';
 import { useEffect, useRef, useState } from 'react';
-import { submitContact } from '@/lib/contact.functions';
+import emailjs from '@emailjs/browser';
 import { ArrowDown, ArrowDownToLine, ArrowRight, ArrowUpRight, Award, Binary, BrainCircuit, Braces, Code2, Database, Github, GraduationCap, Linkedin, Mail, MapPin, Menu, Phone, Sparkles, Terminal, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ProjectVisual } from '@/components/portfolio/ProjectVisual';
